@@ -3,82 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urban Informatics & Spatial Analytics Portfolio | Shubhranshu</title>
+    <title>Urban Informatics Portfolio | Shubhranshu</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 950px; margin: 0 auto; padding: 20px; color: #333; background-color: #fdfdfd; }
-        h1, h2, h3 { color: #2c3e50; }
-        .section-card { background: #ffffff; border: 1px solid #e1e4e8; padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .map-container { text-align: center; margin: 15px 0; }
-        .btn { display: inline-block; background: #0366d6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
+        h1 { color: #2c3e50; }
+        .card { background: #f9f9f9; border: 1px solid #ddd; padding: 20px; margin-bottom: 20px; border-radius: 5px; }
+        .btn { display: inline-block; background: #0366d6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
         .btn:hover { background: #0056b3; }
-        img, .gif-preview { max-width: 100%; height: auto; display: block; margin: 15px auto; border-radius: 6px; border: 1px solid #ddd; }
-        .image-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        @media (max-width: 768px) { .image-grid { grid-template-columns: 1fr; } }
-        ul { padding-left: 20px; }
-        hr { border: 0; height: 1px; background: #ddd; margin: 30px 0; }
     </style>
 </head>
 <body>
-
     <h1>Urban Informatics & Spatial Analytics Portfolio</h1>
-    <p><strong>Student Name:</strong> Shubhranshu | <strong>Roll No./ID:</strong> MPP Student, IIT Tirupati</p>
+    <p><strong>Student Name:</strong> Shubhranshu | <strong>Course:</strong> HS524M Test 2</p>
     <hr>
 
-    <!-- QUESTION 1 SECTION -->
-    <div class="section-card">
-        <h2>Question 1: Interactive Web Mapping of Waste-Bin Observations</h2>
-        <p>Interactive spatial mapping of campus waste bin observations collected via QField, featuring high-resolution photographic evidence embedded in custom popups, marker clustering, and Esri satellite imagery basemaps.</p>
-        <div class="map-container">
-            <a class="btn" href="map.html" target="_blank">🗺️ Open Interactive Waste-Bin Map</a>
-        </div>
+    <div class="card">
+        <h2>Question 1</h2>
+        <p>Interactive web mapping of waste-bin observations using QField and Folium.</p>
+        <a class="btn" href="q1.html">View Question 1 Map</a>
     </div>
 
-    <!-- QUESTION 2 SECTION -->
-    <div class="section-card">
-        <h2>Question 2: Ludhiana Night-time Radiance Trends (2014–2024)</h2>
-        <p><strong>City & Dataset:</strong> Ludhiana, Punjab | VIIRS Night-time Lights (NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG) | <strong>Boundary Source:</strong> OpenStreetMap (via osmnx / Nominatim)</p>
-
-        <hr>
-
-        <h3>1. Dynamic Temporal Animation (2014–2024)</h3>
-        <p>The annual mean night-time radiance evolution visualizes the outward expansion of urban light intensity into peripheral zones over the 11-year observation period.</p>
-        <img class="gif-preview" src="outputs/ludhiana_ntl_years.gif" alt="Ludhiana VIIRS Night-time Lights Animation">
-
-        <hr>
-
-        <h3>2. Long-Term Trend & Statistical Summary</h3>
-        <img src="outputs/mean_radiance_graph.png" alt="Ludhiana Mean Radiance Trend Graph">
-        <p><strong>Statistical Findings:</strong></p>
-        <ul>
-            <li><strong>Linear Trend Slope:</strong> +0.17 nW/cm²/sr per year (R² = 0.84)</li>
-            <li><strong>Total Percentage Change (2014–2024):</strong> +73.7% overall increase in city-wide mean radiance</li>
-        </ul>
-
-        <hr>
-
-        <h3>3. Spatial Patterns & Decade Change Mapping</h3>
-        <p>Visualizing the shift in luminosity distribution between baseline (2014) and target (2024) years:</p>
-        <div class="image-grid">
-            <div>
-                <p style="text-align: center; font-weight: bold;">Baseline Radiance (2014)</p>
-                <img src="outputs/radiance_2014.png" alt="2014 Radiance Map">
-            </div>
-            <div>
-                <p style="text-align: center; font-weight: bold;">Final Radiance (2024)</p>
-                <img src="outputs/radiance_2024.png" alt="2024 Radiance Map">
-            </div>
-        </div>
-        <p style="text-align: center; font-weight: bold; margin-top: 20px;">Net Change Map (2024 minus 2014)</p>
-        <img src="outputs/change_map.png" alt="Ludhiana Radiance Change Map">
-        <p><strong>Change Metrics:</strong> The mean pixel change registered at +1.62 nW/cm²/sr. Spatial analysis indicates that <strong>85.9%</strong> of city pixels experienced a significant increase in brightness (>0.5 nW/cm²/sr), while only <strong>0.9%</strong> dimmed.</p>
-
-        <hr>
-
-        <h3>4. Discussion & Limitations</h3>
-        <p><strong>Spatial Pattern:</strong> High radiance values are heavily clustered within the central commercial and industrial cores of Ludhiana. The change map reveals prominent outward radiation into peri-urban fringes, confirming active suburban development and industrial spillover.</p>
-        <p><strong>Temporal Change:</strong> The linear regression trend (+0.17 units/year) and a 73.7% total surge reflect robust local economic growth, rural-urban transition, and increased rural electrification/infrastructure development.</p>
-        <p><strong>Data Limitations:</strong> VIIRS night-time lights operate at a coarse resolution (~464 m per pixel), leading to a "blooming effect" where bright urban light spills over into adjacent unlit or dark rural pixels. Furthermore, night-time radiance serves as a robust proxy for economic activity and infrastructure but does not directly measure population density, wealth distribution, or precise energy consumption without complementary demographic datasets.</p>
+    <div class="card">
+        <h2>Question 2</h2>
+        <p>Ludhiana annual mean night-time radiance trends (VIIRS, 2014–2024).</p>
+        <a class="btn" href="q2.html">View Question 2 Analysis</a>
     </div>
-
 </body>
 </html>
